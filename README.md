@@ -11,11 +11,11 @@ Event-driven microservice for processing user activity logs using Node.js, Kafka
 - **Deployment**: Dockerized and orchestrated with Kubernetes.
 
 ### Architecture Choices
-- **DDD**: Ensures clear domain boundaries and maintainable code structure.
-- **Kafka**: Provides scalable, fault-tolerant event processing.
-- **MongoDB**: Flexible schema for activity logs with efficient indexing.
-- **Node.js**: Lightweight and performant for I/O-heavy operations.
-- **Kubernetes**: Enables scalability and resilience.
+- **DDD**: I split the code into domain, application, and infrastructure folders to keep things organized. The domain folder has the core logic, like the UserActivity class, so it’s not mixed with database or Kafka code.
+- **Kafka**: I used Kafka to handle user activities in real time.
+- **MongoDB**: Flexible for storing activity data, which might have different fields. I added indexes on userId, action, and timestamp to make the API queries faster, especially for filtering and pagination.
+- **Node.js**: It’s fast for handling network stuff like API requests and Kafka messages.
+- **Docker and Kubernetes for Deployment**: Docker ensures consistent environments across development and production, while Kubernetes provides scalability and resilience.
 
 ## Setup Instructions
 
