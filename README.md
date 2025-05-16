@@ -30,3 +30,20 @@ Event-driven microservice for processing user activity logs using Node.js, Kafka
    ```bash
    git clone <repository-url>
    cd user-activity-service
+
+3. **Environment Setup**
+   ```bash
+   cp .env.example .env
+   
+4. **Build and Run Locally**
+     ```bash
+   npm install
+   docker build -t user-activity-service .
+   docker run -p 3000:3000 --env-file .env user-activity-service
+     
+5. **Deploy to Kubernetes**
+    ```bash
+   kubectl apply -f k8s/deployment.yaml
+   kubectl apply -f k8s/service.yaml
+
+
