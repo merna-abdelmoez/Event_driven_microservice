@@ -38,12 +38,13 @@ Event-driven microservice for processing user activity logs using Node.js, Kafka
 4. **Build and Run Locally**
      ```bash
    npm install
-   docker build -t user-activity-service .
-   docker run -p 3000:3000 --env-file .env user-activity-service
-     
-5. **Deploy to Kubernetes**
-    ```bash
-   kubectl apply -f k8s/deployment.yaml
-   kubectl apply -f k8s/service.yaml
 
+     
+5. **Start Kafka and other services**
+    ```bash
+   docker-compose up -d
+
+6.**Start the microservices**
+   ```bash
+   npm start
 
