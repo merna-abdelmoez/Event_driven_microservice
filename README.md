@@ -28,7 +28,7 @@ Event-driven microservice for processing user activity logs using Node.js, Kafka
 
 2. **Clone Repository**
    ```bash
-   git clone <repository-url>
+   git clone <merna-abdelmoez/Event_driven_microservice>
    cd user-activity-service
 
 3. **Environment Setup**
